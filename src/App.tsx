@@ -5,7 +5,6 @@ import { Briefcase, Award, PenSquare } from "lucide-react";
 import { useState, useEffect, useCallback, lazy, Suspense } from "react";
 import { BackgroundBeamsWithCollision } from "./components/ui/background-beams-with-collision";
 import { AboutMeHero } from "./components/AboutMeHero";
-import click from "../src/sound/click.mp3";
 import { CursorBubble } from "./components/CursorBubble";
 
 // Lazy-loaded components
@@ -20,8 +19,6 @@ const Blogs = lazy(() => import("./components/Blogs"));
 function App() {
   const [openEgg, setOpenEgg] = useState(false);
   const [targetSection, setTargetSection] = useState<string | null>(null);
-  const [audioLoaded, setAudioLoaded] = useState(false);
-  const [audio] = useState(() => new Audio(click));
 
   const scrollToSection = useCallback((id: string) => {
     const element = document.getElementById(id);
@@ -55,34 +52,7 @@ function App() {
     return () => clearInterval(interval);
   }, []);
 
-  // Audio handling
-  useEffect(() => {
-    audio.preload = "auto";
-    audio.addEventListener("canplaythrough", () => setAudioLoaded(true));
 
-    return () => {
-      audio.removeEventListener("canplaythrough", () => setAudioLoaded(true));
-      audio.pause();
-    };
-  }, [audio]);
-
-  useEffect(() => {
-    if (!audioLoaded) return;
-
-    const handleClick = () => {
-      // Use a single instance and reset
-      if (audio) {
-        audio.currentTime = 0;
-        audio.play().catch(() => {}); // Avoid console errors if autoplay blocked
-      }
-    };
-
-    document.addEventListener("click", handleClick);
-
-    return () => {
-      document.removeEventListener("click", handleClick);
-    };
-  }, [audio, audioLoaded]);
 
   // Loading state for suspense
   const LoadingFallback = () => (
