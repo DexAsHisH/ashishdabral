@@ -141,7 +141,7 @@ const AnimatedToast = ({ show }: { show: boolean }) => {
     >
       <div className="flex items-center">
         <span className="mr-2">✨</span>
-        <span>Achievements unlocked!</span>
+        <span>Thankyou for Visiting!❤️</span>
       </div>
     </motion.div>
   );
