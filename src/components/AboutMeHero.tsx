@@ -8,7 +8,7 @@ import {
 import EasterOrb from "./EasterOrb";
 import Pfp from "./Pfp";
 import { ColourfulText } from "./ui/colourful-text";
-import resume from "../assets/resume/Ashish-dabral-resume.pdf";
+import resume from "../assets/resume/resume.pdf";
 import { FancyToolTip } from "./FancyToolTip";
 import { motion, useAnimation } from "framer-motion";
 import { useEffect } from "react";
