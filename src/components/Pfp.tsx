@@ -1,5 +1,5 @@
 import { useRef, useState, useEffect, useCallback } from "react";
-import jinWoo from "../assets/jinwoo.jpg";
+import jinWoo from "../assets/jinWoo.jpg";
 import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
 
 export default function Pfp() {
