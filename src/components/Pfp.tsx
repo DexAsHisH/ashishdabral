@@ -29,7 +29,8 @@ export default function Pfp() {
   const handleResize = useCallback(() => {
     const width = window.innerWidth;
     const height = window.innerHeight;
-    setIsVisible(!(width < 640 || height < 500));
+    // Only hide on extremely small screens
+    setIsVisible(!(width < 320 || height < 400));
   }, []);
 
   useEffect(() => {
@@ -77,7 +78,7 @@ export default function Pfp() {
 
   return (
     <div
-      className="relative ml-6 group perspective-1000 "
+      className="relative group perspective-1000 w-64 h-64 sm:w-72 sm:h-72 md:w-80 md:h-80 lg:w-96 lg:h-96 mx-auto md:mx-0"
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
       onMouseEnter={handleMouseEnter}
@@ -98,16 +99,14 @@ export default function Pfp() {
       />
 
       {/* Main profile image */}
-      <motion.div className="overflow-hidden rounded-3xl" style={{ transform }}
-      >
+      <motion.div className="overflow-hidden rounded-3xl h-full w-full" style={{ transform }}>
         <motion.img
           src={jinWoo}
           alt="Ashish Dabral"
           width="300"
           height="300"
           loading="eager"
-          
-          className="w-[90vw] max-w-[450px] h-auto object-contain rounded-3xl shadow-xl will-change-transform 
+          className="h-full w-full object-cover rounded-3xl shadow-xl will-change-transform 
           grayscale group-hover:grayscale-0 group-hover:saturate-150 
           transition-all duration-500 ease-out 
           group-hover:shadow-[0_0_40px_#8b5cf6] 

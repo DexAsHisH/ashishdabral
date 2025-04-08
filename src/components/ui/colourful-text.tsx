@@ -27,7 +27,7 @@ export function ColourfulText({ text }: { text: string }) {
 
   return (
     <>
-    <span className="inline-block whitespace-pre font-sans tracking-tight text-3xl">
+   <span className="inline-block whitespace-normal md:whitespace-pre font-sans tracking-tight text-xl sm:text-2xl md:text-3xl">
       {text.split("").map((char, index) => (
         <motion.span
           key={`${char}-${index}-${colorIndex}`}

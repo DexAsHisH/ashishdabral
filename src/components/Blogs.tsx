@@ -2,10 +2,16 @@ import { FocusCards } from "./ui/focus-cards";
 import eren from "../assets/pfps/eren.jpeg"
 import goku from "../assets/pfps/goku.jpeg"
 import sukuna from "../assets/pfps/sukuna.jpeg"
+import zoro from "../assets/pfps/zoro.jpg"
 
 
 export default function Blogs() {
   const cards = [
+    {
+      title: "Decoding AI Jargons",
+      src: zoro,
+      href:"https://medium.com/@dabral-ashish/cbd2b8053b7e"
+    },
     {
       title: "IaaS vs PaaS",
       src: eren,
@@ -21,6 +27,7 @@ export default function Blogs() {
       src: sukuna,
       href:"https://medium.com/@dabral-ashish/python-internals-how-it-really-works-242e96905efc"
     },
+
   ];
 
   return <FocusCards cards={cards} />;

@@ -57,7 +57,7 @@ export function AboutMeHero({
   return (
     <div
       id="profile"
-      className="w-full relative px-3 sm:px-6 lg:px-8 py-6 sm:py-10 overflow-hidden"
+      className="w-full relative px-3 sm:px-6 lg:px-8 py-12 sm:py-10 overflow-hidden"
     >
       {/* Static Background Gradient */}
       <div className="absolute inset-0 bg-gradient-to-b from-[#1a103a]/40 to-transparent -z-10" />
