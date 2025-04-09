@@ -12,6 +12,7 @@ import resume from "../assets/resume/resume.pdf";
 import { FancyToolTip } from "./FancyToolTip";
 import { motion, useAnimation } from "framer-motion";
 import { useEffect } from "react";
+import { BuyMeACoffeeButton } from "./BuyMeACoffeeButton";
 
 interface AboutMeHeroProps {
   scrollToSection: (section: string) => void;
@@ -144,7 +145,7 @@ export function AboutMeHero({
               </FancyToolTip>
             </a>
           </div>
-
+          
           {/* Action Buttons */}
           <div className="flex flex-wrap gap-3 sm:gap-6">
             <motion.button
@@ -181,6 +182,11 @@ export function AboutMeHero({
                 </motion.div>
               </motion.div>
             </a>
+          </div>
+          
+          {/* Buy Me A Coffee Button - Now positioned below the other buttons */}
+          <div className="flex mt-4 sm:mt-4">
+            <BuyMeACoffeeButton />
           </div>
         </div>
 
