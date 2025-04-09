@@ -7,7 +7,7 @@ import { BackgroundBeamsWithCollision } from "./components/ui/background-beams-w
 import { AboutMeHero } from "./components/AboutMeHero";
 import { CursorBubble } from "./components/CursorBubble";
 
-// Lazy-loaded components
+
 const Achievements = lazy(() => import("./components/Achievements"));
 const Skills = lazy(() => import("./components/Skills"));
 const EasterOrb = lazy(() => import("./components/EasterOrb"));
@@ -31,7 +31,7 @@ function App() {
     setOpenEgg(true);
   }, []);
 
-  // Section rotation logic
+ 
   useEffect(() => {
     const sectionIds = [
       "profile",
@@ -52,9 +52,6 @@ function App() {
     return () => clearInterval(interval);
   }, []);
 
-
-
-  // Loading state for suspense
   const LoadingFallback = () => (
     <div className="flex items-center justify-center p-8">
       <div className="w-6 h-6 border-2 border-t-2 border-[#10b981] rounded-full animate-spin"></div>

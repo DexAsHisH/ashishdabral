@@ -11,7 +11,7 @@ const SKILLS = [
 ];
 
 export default function Skills() {
-  const infiniteSkills = [...SKILLS, ...SKILLS]; // Duplicate for infinite scroll
+  const infiniteSkills = [...SKILLS, ...SKILLS]; 
 
   return (
     <div

@@ -70,7 +70,7 @@ export default function Quests() {
       <>
         <p>{project.description}</p>
 
-        {/* Colored tech stack chips */}
+
         <div className="mt-4 flex flex-wrap gap-2">
           {project.techStack.map((tech, index) => (
             <span
@@ -82,7 +82,7 @@ export default function Quests() {
           ))}
         </div>
 
-        {/* Badge and XP */}
+ 
         <div className="mt-4 flex items-center justify-between">
           <motion.span
             className={`text-sm font-bold px-3 py-1 rounded-full bg-gradient-to-r ${badgeColors[project.level]} text-white shadow-lg`}

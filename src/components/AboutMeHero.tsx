@@ -28,7 +28,7 @@ export function AboutMeHero({
   const rotateControls = useAnimation();
   const handleMouseEnter = () => {
     rotateControls.set({ rotate: 0 }); 
-    rotateControls.stop(); // pause rotation
+    rotateControls.stop();
   };
 
   const handleMouseLeave = () => {
@@ -43,7 +43,6 @@ export function AboutMeHero({
     });
   };
 
-  // Start rotating on mount
   useEffect(() => {
     rotateControls.start({
       rotate: 360,
@@ -53,14 +52,13 @@ export function AboutMeHero({
         repeat: Infinity,
       },
     });
-  }, [rotateControls]);  // Added dependency array to prevent unnecessary re-renders
+  }, [rotateControls]); 
 
   return (
     <div
       id="profile"
       className="w-full relative px-3 sm:px-6 lg:px-8 py-12 sm:py-10 overflow-hidden"
     >
-      {/* Static Background Gradient */}
       <div className="absolute inset-0 bg-gradient-to-b from-[#1a103a]/40 to-transparent -z-10" />
 
       {targetSection === "profile" && (
@@ -87,7 +85,6 @@ export function AboutMeHero({
             through code.
           </p>
 
-          {/* Social Icons */}
           <div className="flex flex-wrap space-x-3 xs:space-x-4 sm:space-x-6 md:space-x-8 text-xl sm:text-2xl md:text-3xl p-2 sm:p-3 text-gray-400 items-center">
             <a
               href="https://github.com/DexAsHisH"
@@ -146,7 +143,7 @@ export function AboutMeHero({
             </a>
           </div>
           
-          {/* Action Buttons */}
+       
           <div className="flex flex-wrap gap-3 sm:gap-6">
             <motion.button
               onClick={() => scrollToSection("quests")}
@@ -184,13 +181,11 @@ export function AboutMeHero({
             </a>
           </div>
           
-          {/* Buy Me A Coffee Button - Now positioned below the other buttons */}
           <div className="flex mt-4 sm:mt-4">
             <BuyMeACoffeeButton />
           </div>
         </div>
 
-        {/* Right Side: Profile Picture */}
         <div className="w-full md:w-1/3 flex justify-center items-center mt-6 md:mt-0">
           <Pfp />
         </div>

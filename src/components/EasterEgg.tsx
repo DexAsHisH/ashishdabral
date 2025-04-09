@@ -9,7 +9,6 @@ interface EasterEggProps {
 export default function EasterEgg({ open, setOpen }: EasterEggProps) {
   return (
     <>
-      {/* Hidden clickable dot at bottom-right */}
       <AnimatePresence>
         {open && (
           <motion.div

@@ -9,11 +9,11 @@ import {
 export default function Footer() {
   return (
     <footer className="w-full bg-black/10 text-amber-100">
-      {/* Top border line */}
+ 
       <div className="border-t border-gray-800 w-full"></div>
 
       <div className="max-w-auto mx-auto w-full py-6 px-6 sm:px-8 flex flex-col md:flex-row justify-between items-center gap-4">
-        {/* Left side icons */}
+
         <div className="flex space-x-6 text-2xl ml-2 text-gray-400 items-center">
           <a
             href="https://github.com/DexAsHisH"
@@ -62,7 +62,6 @@ export default function Footer() {
           </a>
         </div>
 
-        {/* Right side text */}
         <div className="text-sm text-gray-400 font-mono text-center md:text-right">
           <span>Made with love. &lt;3</span>
         </div>

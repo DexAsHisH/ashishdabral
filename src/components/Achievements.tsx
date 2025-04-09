@@ -40,7 +40,7 @@ export default function Achievements() {
     },
   ];
 
-  // Animation variants
+
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -114,10 +114,10 @@ export default function Achievements() {
         </motion.div>
       </div>
 
-      {/* Toast Notification */}
+
       <AnimatedToast show={showToast} />
 
-      {/* Achievement Details Modal */}
+
       <AnimatedModal 
         isOpen={selectedAchievement !== null} 
         onClose={() => setSelectedAchievement(null)}
@@ -147,7 +147,7 @@ const AnimatedToast = ({ show }: { show: boolean }) => {
   );
 };
 
-// Modal component for achievement details
+
 interface Achievement {
   title: string;
   icon: string;

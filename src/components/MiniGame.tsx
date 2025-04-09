@@ -7,7 +7,6 @@ import snakeBody from "../assets/snake/snakeBody.png";
 import snakeHead from "../assets/snake/snakeHead.png";
 import title from "../assets/snake/arcade-title.png";
 
-// Make tile size responsive based on screen width
 const calculateTileSize = () => {
   const width = window.innerWidth;
   if (width < 480) return 20; // Mobile

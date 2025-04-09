@@ -7,7 +7,6 @@ export default function Pfp() {
   const [isVisible, setIsVisible] = useState(true);
   const [isHovered, setIsHovered] = useState(false);
 
-  // Motion values for smoother animations
   const mouseX = useMotionValue(0);
   const mouseY = useMotionValue(0);
 

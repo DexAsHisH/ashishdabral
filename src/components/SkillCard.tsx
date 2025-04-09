@@ -13,16 +13,16 @@ export function SkillCard({ skill }: SkillCardProps) {
       whileHover={{ scale: 1.05 }}
       className="relative p-4 px-6 rounded-2xl border border-white/10 backdrop-blur-sm bg-black/5 transition-all duration-300 w-[180px] sm:w-[200px]"
     >
-      {/* Icon + Title inline */}
+  
       <div className="flex items-center gap-1 text-gray-100 text-md truncate">
         <span className="text-md">{skill.icon}</span>
         {skill.name}
       </div>
       
-      {/* Level */}
+
       <div className="text-xs text-white/40">Lvl {skill.level}</div>
 
-      {/* XP Bar */}
+  
       <div className="mt-3">
         <div className="h-2 rounded-full bg-white/10 overflow-hidden">
           <motion.div

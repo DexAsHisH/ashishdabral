@@ -9,12 +9,12 @@ export function HUD() {
   const lastScrollY = useRef(0);
   const navRef = useRef<HTMLElement | null>(null);
   
-  // Get scroll progress for animations
+
   const { scrollYProgress } = useScroll();
   const navOpacity = useTransform(scrollYProgress, [0, 0.05], [1, 0.95]);
   const navBlur = useTransform(scrollYProgress, [0, 0.1], [3, 8]);
   
-  // Define navigation items with proper typing
+
   const navItems = [
     { id: 'profile', icon: Shield, label: 'Profile', color: 'blue' },
     { id: 'skills', icon: Sword, label: 'Skills', color: 'purple' },
@@ -28,30 +28,27 @@ export function HUD() {
     if (element) {
       setIsScrolling(true);
       setActiveSection(id);
-      
-      // Get the navigation height to offset the scroll position
+
       const navHeight = navRef.current ? navRef.current.offsetHeight : 0;
-      
-      // Calculate element position with offset
+
       const elementPosition = element.getBoundingClientRect().top + window.scrollY - navHeight;
-      
-      // Smooth scroll to the element with offset
+
       window.scrollTo({
         top: elementPosition,
         behavior: 'smooth'
       });
       
-      // Reset scrolling state after animation completes
+
       setTimeout(() => {
         setIsScrolling(false);
       }, 1000);
     }
   };
   
-  // Handle scroll to detect current section and collapse nav on scroll down
+ 
   useEffect(() => {
     const handleScroll = () => {
-      // Auto-collapse logic with debounce effect
+     
       const currentScrollY = window.scrollY;
       
       if (currentScrollY > 150) {
@@ -66,23 +63,23 @@ export function HUD() {
       
       lastScrollY.current = currentScrollY;
       
-      // Active section detection
+
       if (!isScrolling) {
-        // Get the navigation height for offset calculation
+  
         const navHeight = navRef.current ? navRef.current.offsetHeight : 0;
         
-        // Find all sections
+
         const sectionElements = navItems.map(item => ({
           id: item.id,
           element: document.getElementById(item.id)
         })).filter(item => item.element);
         
-        // Find the section currently in view
+  
         const currentSection = sectionElements.find(({ element }) => {
           if (!element) return false;
           
           const rect = element.getBoundingClientRect();
-          // Adjust threshold to account for nav height
+   
           return rect.top <= navHeight + 50 && rect.bottom >= navHeight + 50;
         });
         
@@ -96,7 +93,7 @@ export function HUD() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, [isScrolling, navItems]);
 
-  // Color utilities
+
   const colorMap: Record<string, { bg: string, text: string, shadow: string }> = {
     blue: { bg: 'bg-blue-400', text: 'text-blue-400', shadow: 'shadow-blue-400/50' },
     purple: { bg: 'bg-purple-400', text: 'text-purple-400', shadow: 'shadow-purple-400/50' },
@@ -119,8 +116,7 @@ export function HUD() {
       transition={{ type: 'spring', stiffness: 100, damping: 20 }}
     >
       <div className="max-w-auto mx-auto w-full flex flex-col sm:flex-row items-center justify-between gap-3 sm:gap-4">
-        
-        {/* Navigation Buttons */}
+  
         <div className="flex flex-wrap justify-center sm:justify-start items-center gap-3 sm:gap-6 w-full sm:w-auto px-2">
           {navItems.map(item => {
             const Icon = item.icon;
@@ -145,7 +141,7 @@ export function HUD() {
                   {item.label}
                 </span>
                 
-                {/* Active indicator */}
+
                 <AnimatePresence>
                   {isActive && (
                     <motion.div 
@@ -162,7 +158,7 @@ export function HUD() {
           })}
         </div>
 
-        {/* Level Info */}
+ 
         <div className="flex items-center gap-4 w-full sm:w-auto px-2 bg-black/30 rounded-lg p-2">
           <motion.div 
             className="text-blue-400 text-center"
@@ -173,12 +169,12 @@ export function HUD() {
           </motion.div>
           
           <div className="w-full max-w-xs sm:w-36">
-            {/* XP Bar container */}
+
             <motion.div 
               className="h-2 w-full bg-blue-900/50 rounded-full overflow-hidden"
               whileHover={{ scale: 1.05 }}
             >
-              {/* XP Bar fill */}
+
               <motion.div 
                 className="h-full bg-gradient-to-r from-blue-500 to-blue-300 rounded-full shadow-md shadow-blue-400/50"
                 initial={{ width: "0%" }}
