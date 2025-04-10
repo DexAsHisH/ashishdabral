@@ -12,6 +12,15 @@ const content: {
   techStack: string[];
 }[] = [
   {
+    title: "Hitesh sir's persona Chat Bot",
+    href: "https://hitesh-sir-s-bot.streamlit.app/",
+    description:
+      "A hitesh-(ChaiaurCode) sir's persona Bot, Where you can directly chat to him and get replies without any premium 😁.",
+    xp: 1200,
+    level: "Epic",
+    techStack: ["LLM", "Gemini", "Python", "Streamlit","Prompting"],
+  },
+  {
     title: "Thoughtify",
     href: "https://thoughtify-eight.vercel.app/",
     description:
