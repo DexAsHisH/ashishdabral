@@ -15,7 +15,7 @@ const content: {
     title: "Hitesh sir's persona Chat Bot",
     href: "https://hitesh-sir-s-bot.streamlit.app/",
     description:
-      "A hitesh-(ChaiaurCode) sir's persona Bot, Where you can directly chat to him and get replies instantly 😁.",
+      "A hitesh-(ChaiaurCode) sir's persona Bot, Where you can directly chat with him and get instant replies (MUST TRY)😁.",
     xp: 1200,
     level: "Epic",
     techStack: ["LLM", "Gemini", "Python", "Streamlit","Prompting"],
