@@ -8,7 +8,11 @@ const SKILLS = [
   { name: "Python", level: 82, xp: 8200, maxXp: 10000, icon: "🐍" },
   { name: "AWS", level: 70, xp: 7000, maxXp: 10000, icon: "☁️" },
   { name: "Docker", level: 78, xp: 7800, maxXp: 10000, icon: "🐳" },
+  { name: "LLMs", level: 68, xp: 7800, maxXp: 10000, icon: "🤖" },
+  { name: "AI agent", level: 65, xp: 7800, maxXp: 10000, icon: "🕵🏻‍♂️" },
+  { name: "Prompting", level: 55, xp: 7800, maxXp: 10000, icon: "⌨️" },
 ];
+
 
 export default function Skills() {
   const infiniteSkills = [...SKILLS, ...SKILLS]; 

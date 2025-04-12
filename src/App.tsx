@@ -6,6 +6,7 @@ import { useState, useEffect, useCallback, lazy, Suspense } from "react";
 import { BackgroundBeamsWithCollision } from "./components/ui/background-beams-with-collision";
 import { AboutMeHero } from "./components/AboutMeHero";
 import { CursorBubble } from "./components/CursorBubble";
+import HeroVideo from "./components/HeroVideo";
 
 
 const Achievements = lazy(() => import("./components/Achievements"));
@@ -143,7 +144,7 @@ function App() {
                   Quest <span className="text-[#e2e8f0]">Log</span>
                 </h2>
               </div>
-              
+              <HeroVideo />
                 <Quests />
               
             </motion.section>
