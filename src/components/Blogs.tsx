@@ -3,10 +3,16 @@ import eren from "../assets/pfps/eren.jpeg"
 import goku from "../assets/pfps/goku.jpeg"
 import sukuna from "../assets/pfps/sukuna.jpeg"
 import zoro from "../assets/pfps/zoro.jpg"
+import dm from "../assets/pfps/dm.jpeg"
 
 
 export default function Blogs() {
   const cards = [
+    {
+      title: "Docker networking",
+      src: dm,
+      href:"https://medium.com/@dabral-ashish/simplifying-docker-networks-how-to-make-your-containers-talk-eb1e5795c173"
+    },
     {
       title: "Decoding AI Jargons",
       src: zoro,
