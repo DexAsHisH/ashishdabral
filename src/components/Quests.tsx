@@ -12,12 +12,21 @@ const content: {
   techStack: string[];
 }[] = [
   {
+    title: "ClassBoard",
+    href: "https://classboard-lime.vercel.app/",
+    description:
+      "ClassBoard is a student dashboard where they can manage courses, track assignments, and calculate their CGPA.",
+    xp: 1800,
+    level: "Epic",
+    techStack: ["React", "Typescript", "Express", "JWT","Shadcn UI"],
+  },
+  {
     title: "Hitesh sir's persona Chat Bot",
     href: "https://hitesh-sir-s-bot.streamlit.app/",
     description:
       "A hitesh-(ChaiaurCode) sir's persona Bot, Where you can directly chat with him and get instant replies (MUST TRY)😁.",
-    xp: 1200,
-    level: "Epic",
+    xp: 900,
+    level: "Rare",
     techStack: ["LLM", "Gemini", "Python", "Streamlit","Prompting"],
   },
   {
