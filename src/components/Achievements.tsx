@@ -9,10 +9,16 @@ export default function Achievements() {
 
   const achievements = [
     {
-      title: "AWS Cloud Quest: Practitioner",
+      title: "AWS AI Practitioner",
+      icon: "🤖",
+      description: "Certified in AI and machine learning services on AWS",
+      href:"https://www.credly.com/badges/69511089-2532-44e0-a926-b1425ef01d3f/public_url"
+    },
+    {
+      title: "AWS Cloud Practitioner",
       icon: "🏆",
-      description: "Cloud computing fundamentals and AWS services",
-      details: "Demonstrated proficiency in core AWS services including EC2, S3, IAM, and CloudWatch."
+      description: "Certified in cloud computing fundamentals and AWS services",
+      href:"https://www.credly.com/badges/6cde3bb7-3ca5-4d1f-bb29-bfdbeee6c7cf/public_url"
     },
     {
       title: "MTA: Introduction to Programming Using Python",
