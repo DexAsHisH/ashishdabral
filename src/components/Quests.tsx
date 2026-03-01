@@ -12,6 +12,15 @@ const content: {
   techStack: string[];
 }[] = [
   {
+    title: "Conflict-Monitor",
+    href: "https://conflict-monitor.com/",
+    description:
+      "Conflict-Monitor is a web application that helps monitor conflicts in a unified dashboard.",
+    xp: 2000,
+    level: "Epic", 
+    techStack: ["React", "Typescript", "Fastapi", "Docker","Tailwind"],
+  },
+  {
     title: "ClassBoard",
     href: "https://classboard-lime.vercel.app/",
     description:
