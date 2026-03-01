@@ -12,13 +12,13 @@ export default function Achievements() {
       title: "AWS AI Practitioner",
       icon: "🤖",
       description: "Certified in AI and machine learning services on AWS",
-      href:"https://www.credly.com/badges/69511089-2532-44e0-a926-b1425ef01d3f/public_url"
+      details: "Gained expertise in AWS AI services like SageMaker, Rekognition, and Comprehend for building intelligent applications."
     },
     {
       title: "AWS Cloud Practitioner",
       icon: "🏆",
       description: "Certified in cloud computing fundamentals and AWS services",
-      href:"https://www.credly.com/badges/6cde3bb7-3ca5-4d1f-bb29-bfdbeee6c7cf/public_url"
+      details: "Earned AWS Cloud Practitioner certification, demonstrating knowledge of core AWS services and cloud concepts."
     },
     {
       title: "MTA: Introduction to Programming Using Python",
