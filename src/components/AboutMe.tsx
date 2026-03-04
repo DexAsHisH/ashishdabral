@@ -79,7 +79,7 @@ export function AboutMe() {
               </div>
             </span>
             ! A{" "}
-            <TechBadge>24</TechBadge>
+            <TechBadge>25</TechBadge>
             -year-old{" "}
             <TechBadge>full-stack developer</TechBadge>{" "}
             from India. I've been coding since{" "}

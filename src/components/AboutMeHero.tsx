@@ -120,11 +120,11 @@ export function AboutMeHero({
               </FancyToolTip>
             </a>
             <a
-              href="mailto:ashishdabral2014@gmail.com"
+              href="mailto:workashishh@gmail.com"
               target="_blank"
               rel="noreferrer"
             >
-              <FancyToolTip label="@ashishdabral2014">
+              <FancyToolTip label="@workashishh">
                 <div className="hover:bg-[#ffffff]/10 hover:text-[#ffffff] rounded-md p-2 transition">
                   <FaEnvelope />
                 </div>
